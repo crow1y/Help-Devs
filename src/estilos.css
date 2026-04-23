@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Inter:wght@400;500;600&display=swap");
+
+/* Cores principais */
+:root {
+  --fundo: #0d1117;
+  --superficie: #161b22;
+  --borda: #30363d;
+  --texto: #e6edf3;
+  --texto-fraco: #8b949e;
+  --verde: #39d353;
+  --azul: #388bfd;
+  --amarelo: #d29922;
+  --vermelho: #f85149;
+  --roxo: #bc8cff;
+}
+
+body {
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar */
+header nav {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
+  color: var(--verde);
+  text-decoration: none;
+}
+
+.campo-busca {
+  background-color: var(--fundo);
+  border: 1px solid var(--borda);
+  color: var(--texto);
+  border-radius: 8px;
+  width: 260px;
+}
+
+.campo-busca:focus {
+  background-color: var(--fundo);
+  color: var(--texto);
+  border-color: var(--verde);
+  box-shadow: 0 0 0 3px rgba(57, 211, 83, 0.15);
+  outline: none;
+}
+
+.campo-busca::placeholder {
+  color: var(--texto-fraco);
+}
+
+/* Sidebar */
+aside .card {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px;
+}
+
+.titulo-sidebar {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--texto-fraco);
+}
+
+.btn-categoria {
+  background: transparent;
+  color: var(--texto-fraco);
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-categoria:hover {
+  background-color: #1c2330;
+  color: var(--texto);
+}
+
+.btn-categoria.ativo {
+  background-color: #1a4d2e;
+  color: var(--verde);
+  font-weight: 600;
+}
+
+/* Dashboard */
+.titulo-secao {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  color: var(--texto-fraco);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-contador {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px;
+}
+
+.contador-numero {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.contador-legenda {
+  font-size: 0.72rem;
+  color: var(--texto-fraco);
+  text-transform: uppercase;
+}
+
+.cor-total     { color: var(--azul); }
+.cor-salvos    { color: var(--amarelo); }
+.cor-concluidos { color: var(--verde); }
+.cor-pendentes { color: var(--vermelho); }
+
+/* Cards de Recurso */
+.card-recurso {
+  background-color: var(--superficie);
+  border: 1px solid var(--borda) !important;
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.card-recurso:hover {
+  border-color: var(--verde) !important;
+  transform: translateY(-2px);
+}
+
+.card-recurso.concluido {
+  opacity: 0.6;
+}
+
+.card-titulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.card-descricao {
+  font-size: 0.8rem;
+  color: var(--texto-fraco);
+}
+
+/* Badges */
+.badge-categoria {
+  background-color: rgba(56, 139, 253, 0.15);
+  color: var(--azul);
+  font-size: 0.7rem;
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+
+.badge-concluido {
+  background-color: rgba(57, 211, 83, 0.15);
+  color: var(--verde);
+  font-size: 0.7rem;
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+
+.badge-pendente {
+  background-color: rgba(210, 153, 34, 0.15);
+  color: var(--amarelo);
+  font-size: 0.7rem;
+  border-radius: 4px;
+  padding: 3px 7px;
+}
+
+/* Botões dos cards */
+.btn-acessar {
+  background-color: rgba(56, 139, 253, 0.1);
+  color: var(--azul);
+  border: 1px solid rgba(56, 139, 253, 0.3);
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
+.btn-acessar:hover {
+  background-color: rgba(56, 139, 253, 0.25);
+  color: var(--azul);
+}
+
+.btn-concluir {
+  background-color: rgba(57, 211, 83, 0.1);
+  color: var(--verde);
+  border: 1px solid rgba(57, 211, 83, 0.3);
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
+.btn-concluir:hover {
+  background-color: rgba(57, 211, 83, 0.25);
+  color: var(--verde);
+}
+
+.btn-desfazer {
+  background-color: rgba(248, 81, 73, 0.1);
+  color: var(--vermelho);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+  font-size: 0.78rem;
+  border-radius: 6px;
+}
+
+.btn-desfazer:hover {
+  background-color: rgba(248, 81, 73, 0.25);
+  color: var(--vermelho);
+}
+
+.btn-salvo {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.btn-salvo:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borda);
+  font-size: 0.8rem;
+  color: var(--texto-fraco);
+}
+
+.nome-aluno {
+  color: var(--verde);
+  font-weight: 600;
+}
